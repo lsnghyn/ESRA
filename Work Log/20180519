@@ -1,0 +1,5 @@
+Time Tracked: 10 hours
+    - Researched Bluetooth Low Energy for communication between RPI0W
+    - Looked through code libraries to use with RPIs with Bluetooth
+    - Researched serial communication and redesigned functional layout
+    - Updated proj_design and todo with current info

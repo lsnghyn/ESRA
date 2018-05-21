@@ -1,0 +1,8 @@
+Time Tracked: 4 hrs
+    - Reasearched potential hardware (cameras) to use with raspberry pis to use with raspberry pis
+    - Due to budget, we've decided to use pi-cameras for video feed
+    - Began flashing minibian (lightweight terminal linux distro) onto available raspberry pis
+
+Road Blocks
+    - display with HDMI to work on rpis
+    - specific hardware (radios and other)

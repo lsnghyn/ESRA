@@ -1,0 +1,22 @@
+Hardware:
+    - 4 Raspberry Pi 3b
+    - 4 Raspberry Pi Zero W
+    - Go Pro
+    - Adafruit GPS v3
+    - BNO055 IMU Absolute
+    - 5-Port Ethernet Switch
+    - RFD900P Radio Transmitter
+
+
+Machine Learning Hardware:
+    - 5 Port Ethernet Switch
+    - 4 Raspberry Pi 3b
+    - Go Pro
+
+Reaction Wheels + Light sensors:
+    - Arduino
+
+GPS / Altimeter / Communication:
+    - RPI0W <=> RFD900P
+    - RPI0W <=> GPS
+    - RPI0W <=> IMU

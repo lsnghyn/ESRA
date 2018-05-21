@@ -1,0 +1,7 @@
+steps to take:
+
+    - flash minibian
+    - install wifi
+    - install vim
+    - install rpiconfig
+    - enable uart

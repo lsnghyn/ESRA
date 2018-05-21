@@ -1,0 +1,25 @@
+<Mission Critical>
+01. Send and recieve data through RFD Radios
+02. Bluetooth or BLE communication between RPI0W
+03. Stream GPS data through Radios
+04. Read GPS data to a map in a separate RPI3b W/ Display
+</Mission Critical>
+
+<Extra Data>
+05. Stream IMU data through Radios
+06. Connect LoRa with a RPI0W
+07. Stream Altimeter data through Radios
+</Extra Data>
+
+<Reaction Wheel - Photocell>
+08. Move reaction wheels with Arduino Nano
+09. Read data from 3-4 Photocells
+10. Design logic to move reaction wheels based on Photocells
+</Reaction Wheel - Photocell>
+
+<Camera ML Platform>
+11. Read Camera data from GoPro to master RPI3b
+12. Install TenserFlow Arch Stack onto 4 RPI3b
+</Camera ML Platform>
+
+

@@ -1,0 +1,6 @@
+Time Tracked: 8 hours
+    - Finally managed to get wifi working with raspberry pi image
+    - installed software libraries to program with
+    - compiled GoLang from source onto the rpi
+    - researched gpio serial reading
+    - started interacting with GPS module with arduino
