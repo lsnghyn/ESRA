@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"log"
 	"time"
 
@@ -17,7 +18,9 @@ const (
 // check is a simple function that checks an error and
 // fatally logs on error.
 func check(err error) {
-	if err != nil {
+	if err == io.EOF {
+		return
+	} else if err != nil {
 		log.Fatal(err)
 	}
 }

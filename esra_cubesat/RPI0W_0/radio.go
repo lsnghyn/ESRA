@@ -45,6 +45,7 @@ func main() {
 	data := make(chan string)
 	reader := bufio.NewReader(os.Stdin)
 	go sendSerialData(data)
+	time.Sleep(time.Second * 2)
 	for {
 		fmt.Print(">>>")
 		sentence, err := reader.ReadString('\n')
