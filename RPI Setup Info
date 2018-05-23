@@ -1,7 +1,7 @@
 steps to take:
-
-    - flash minibian
-    - install wifi
-    - install vim
-    - install rpiconfig
-    - enable uart
+    - flash raspbian stretch lite
+    - Get Wifi Working
+    - install vim, git
+    - RPI Config Keyboard input
+    - Enable uart
+    - get binaries from git public binary dir (github.com/d3coy/esra_binaries)

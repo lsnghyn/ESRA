@@ -1,0 +1,5 @@
+Time Tracked: 12 hours
+    - Reflashed images to a newer better os for raspberry pi's
+    - Began testing on RPI0Ws instead of RPI3bs
+    - Rewrote code for gps RPI0W
+    - Worked on Arduino Motor systems for Air Brakes
