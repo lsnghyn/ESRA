@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"time"
 
@@ -48,7 +47,8 @@ func main() {
 		b = <-data
 		NMEASentence += string(b)
 		if b == byte(10) {
-			fmt.Print(NMEASentence)
+			// Send GPS Sentences through either wifi or Bluetooth(LE)
+			log.Print(NMEASentence)
 			NMEASentence = ""
 		}
 	}
