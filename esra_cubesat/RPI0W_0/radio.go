@@ -47,6 +47,7 @@ func main() {
 	go sendSerialData(data)
 	time.Sleep(time.Second * 2)
 	for {
+		// ToDo: get read data through bluetooth or wifi
 		fmt.Print(">>>")
 		sentence, err := reader.ReadString('\n')
 		check(err)

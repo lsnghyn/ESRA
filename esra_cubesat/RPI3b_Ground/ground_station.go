@@ -1,17 +1,18 @@
 package main
 
 import (
-	"fmt"
+	"bufio"
 	"io"
 	"log"
+	"os"
 	"time"
 
 	"github.com/tarm/serial"
 )
 
 const (
-	serialPort = "/dev/ttyUSB0"
-	baudRate   = 57600
+	serialPort = "/dev/ttyS0"
+	baudRate   = 9600 //57600
 	timeOut    = time.Second * 60
 )
 
@@ -43,6 +44,12 @@ func readSerial(data chan<- byte) {
 }
 
 func main() {
+	file, err := os.Create("gps_data.txt")
+	check(err)
+	defer func() {
+		check(file.Close())
+	}()
+	w := bufio.NewWriter(file)
 	data := make(chan byte)
 	sentence := ""
 	var b byte
@@ -51,7 +58,8 @@ func main() {
 		b = <-data
 		sentence += string(b)
 		if b == byte(10) {
-			fmt.Print(sentence)
+			_, err = w.Write([]byte(sentence))
+			log.Print(sentence)
 			sentence = ""
 		}
 	}

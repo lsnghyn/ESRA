@@ -1,0 +1,5 @@
+Time Tracked: 
+    - Connected RPI3b To another RPI3b via Radio
+    - Connected GPS(Uart) and Radio(USB) onto one RPI3b and sent gps data to Ground Station RPI3b
+    - Tested large antenae receiver with RFD900P Transievers
+    - 
