@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"io"
 	"log"
 	"os"
@@ -22,7 +21,7 @@ func check(err error) {
 	if err == io.EOF {
 		return
 	} else if err != nil {
-		log.Fatal(err)
+		log.Panic(err)
 	}
 }
 
@@ -49,7 +48,6 @@ func main() {
 	defer func() {
 		check(file.Close())
 	}()
-	w := bufio.NewWriter(file)
 	data := make(chan byte)
 	sentence := ""
 	var b byte
@@ -58,7 +56,7 @@ func main() {
 		b = <-data
 		sentence += string(b)
 		if b == byte(10) {
-			_, err = w.Write([]byte(sentence))
+			_, err = file.WriteString(sentence)
 			log.Print(sentence)
 			sentence = ""
 		}

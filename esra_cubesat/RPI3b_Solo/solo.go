@@ -18,7 +18,7 @@ const (
 // fatally logs on error.
 func check(err error) {
 	if err != nil {
-		log.Fatal(err)
+		log.Panic(err)
 	}
 }
 
@@ -39,6 +39,9 @@ func readSerialGPIO(data chan<- byte) {
 	}
 }
 
+// sendSerialData will start reading a string from the
+// input given by the user and will write to the Serial
+// Port. ToDo: pass port s into function
 func sendSerialData(data <-chan string) {
 	c := &serial.Config{Name: serialPort, Baud: 57600, ReadTimeout: timeOut}
 	s, err := serial.OpenPort(c)
@@ -61,7 +64,6 @@ func main() {
 		b = <-dataIn
 		sentence += string(b)
 		if b == byte(10) {
-			// Send GPS Sentences through either wifi or Bluetooth(LE)
 			log.Print(sentence)
 			dataOut <- sentence
 			sentence = ""
